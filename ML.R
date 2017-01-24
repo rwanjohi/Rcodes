@@ -148,15 +148,16 @@ print(confusionMatrix( tabs.gbc), mode = 'everything')
 ##------------------------------------------------------------------------
 # Plotting ROC Curves 
 
-plot(logit.perf,col=2,lwd=2,main="ROC Curve for Classifiers") 
+plot(logit.perf, lwd = 2, col=2,main="ROC Curve for Classifiers") 
 
-plot(rf.perf,col=3,lwd=2,add=T) 
+plot(rf.perf, lwd = 2,col=3, add=T) 
 plot(tree.perf,lwd=2,col=4,add=T) 
 plot(nnet.perf,lwd=2,col=5,add=T)
 plot(svm.perf, lw=2, col = 6, add = T)
-plot(nb.perf, lw = 2, col = 1, add = T)
+plot(nb.perf, lw = 2, col = 7, add = T)
+plot(gbc.perf, lw = 2, col = 8, add = T)
 abline(a=0,b=1,lwd=2,lty=2,col="gray") 
-legend("bottomright",col=c(2:6, 1),lwd=2,legend=c("Logistic","RF","CART","Neural Net", 'SVM', 'N. Bayes'),bty='n', cex = 0.8)
+legend("bottomright",col=c(2:8),lwd=2,legend=c("Logistic","RF","CART","Neural Net", 'SVM', 'N. Bayes', 'GBC'),bty='n', cex = 0.8)
 
 
 
