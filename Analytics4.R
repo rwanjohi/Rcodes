@@ -1,7 +1,4 @@
-## train_model_list{caret}
-## train
-## tune
-
+## Richard Wanjohi
 
 
 library(randomForest) 
@@ -13,12 +10,14 @@ library(bnlearn)
 library(ggplot2)
 library(caret)
 
-df = read.table('C:/Users/Rwanjohi/Desktop/Projects/supp.csv', sep = ',', header = TRUE)
+# read the data
+df = read.table('C:/**********/*****/***/***.csv', sep = ',', header = TRUE)
+# basics
 dim(df)
 names(df)
 head(df)
 summary(df)
-
+# split the data, 20:80 
 N = nrow(df)
 Ind = sample(N, N*0.8, replace = FALSE)
 train = df[Ind, ]
@@ -30,7 +29,7 @@ Y_test  = test[, p]
 
 # Logistic Regression 
 logit.fit = glm( Y_train ~., family = binomial(logit),data = train) 
-## fm12 = stepAIC(logit.fit)
+## fm12 = stepAIC(logit.fit) # stepwise 
 
 logit.preds = predict(logit.fit,newdata=test,type="response") 
 logit.pred = prediction(logit.preds,Y_test) 
@@ -160,7 +159,7 @@ abline(a=0,b=1,lwd=2,lty=2,col="gray")
 legend("bottomright",col=c(2:6, 1),lwd=2,legend=c("Logistic","RF","CART","Neural Net", 'SVM', 'N. Bayes'),bty='n', cex = 0.8)
 
 
-##legend(0.8, 0.4, c('Logit', 'RF', 'CART','Neural net','svm'), 2:6)
+
 
 
 
