@@ -1,4 +1,4 @@
 theme: jekyll-theme-cayman
 title: Welcome aboard!
-description: This function compares different Machine Learning classification algorithms, in R, 
-compute various statistics, confusion matrix, and ROC curve for each. 
+description: This function compares different Machine Learning classification algorithms, in R.
+
