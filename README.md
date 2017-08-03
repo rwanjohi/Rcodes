@@ -8,3 +8,6 @@ Compare different classification algorithms, in R, and compute various statistic
 s = rnorm(100)
 summary(s)
 ```
+---
+
+> All models are wrong, but some are useful
