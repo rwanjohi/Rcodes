@@ -26,8 +26,8 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
     </tr>
 </table>
 ---
-```Python
+```python
 import Keras
 import Tensorflow
-from sklean.ensemble import GradientBoostingClassifier
+from sklearn.ensemble import GradientBoostingClassifier
 ```
